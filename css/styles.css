@@ -576,3 +576,179 @@ button {
   color: var(--secondary-black-color);   
   margin-bottom: 16px;
 }
+
+/* ======== /BACKDROP with MODAL ======== */
+
+
+/* ======== MODAL FORM ======== */ 
+
+.modal-field-wrapper {
+  margin-bottom: 8px;
+}
+
+.comment-margin {
+  margin-bottom: 16px;
+}
+
+.modal-label{   
+    display: block;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: rgb(142 143 153);
+    margin-bottom: 4px;
+}
+
+.modal-input-wrapper {
+  position: relative;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;   
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;   
+  padding-left: 38px;
+  border: 1px solid rgb(46 47 66 / 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+  border-color: var(--primary-brand-color);
+}
+
+.modal-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--secondary-black-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus+.modal-input-icon {
+  fill: var(--primary-brand-color);
+}
+
+/* Textarea styling */
+.modal-comment {
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
+  resize: none;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgb(46 47 66 / 0.4);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-comment:focus {
+  border-color: var(--primary-brand-color);
+}
+
+.modal-comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  /* Округлено від 1.16667 */
+  letter-spacing: 0.04em;
+  color: rgb(46 47 66 / 0.4);
+}
+
+/* Custom Checkbox */
+.modal-checkbox-wrapper {
+  margin-bottom: 24px;
+}
+
+.modal-checkbox-label {
+  /* flex для вирівнювання тексту та кастомного квадрата в один рядок */
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.modal-custom-checkbox {
+  /* Забороняємо стискання квадрата, якщо текст довгий */
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  /* Початковий стан (Normal) */
+  border: 1px solid rgb(46 47 66 / 0.4);
+  border-radius: 2px;
+  background-color: transparent;
+  fill: transparent; /* Ховаємо іконку галочки */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Стан Active (Checked) */
+.modal-checkbox:checked + .modal-checkbox-label > .modal-custom-checkbox {
+  background-color: var(--primary-accent-color); /* Синій фон */
+  border: none;
+  fill: var(--secondary-bg-color); /* Робимо іконку галочки білою */
+}
+
+/* Стиль для посилання */
+.modal-privacy-link {
+  color: var(--primary-brand-color);
+  text-decoration: underline;
+  margin-left: 4px;
+    /* Невеликий відступ від тексту */   
+}
+
+.modal-check-icon {
+  /* Забезпечує правильне центрування іконки */
+  display: block;    /* Прибираємо можливі інлайнові відступи */
+
+  /* Якщо не використовуємо currentColor, задаємо колір тут */
+  fill: var(--secondary-bg-color);
+
+  /* Плавна поява іконки при зміні fill (хоча початково вона прихована батьком) */
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
+
+/* Submit Button */
+.modal-submit-btn {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-brand-color);
+  color: var(--primary-white-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+  background-color: var(--primary-accent-color);
+}
+
+/* ======== /MODAL FORM ======== */
+
