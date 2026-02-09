@@ -761,7 +761,7 @@ button {
 
 .modal-checkbox-label {
   /* flex для вирівнювання тексту та кастомного квадрата в один рядок */
-  display: flex;
+  /* display: flex; */
   align-items: center;
 
   font-size: 12px;
