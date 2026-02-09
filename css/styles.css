@@ -772,22 +772,26 @@ button {
 
 .modal-custom-checkbox {
   /* Забороняємо стискання квадрата, якщо текст довгий */
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   
   width: 16px;
-  height: 16px;
-  margin-right: 8px;
-  /* Початковий стан (Normal) */
-  border: 1px solid rgb(46 47 66 / 0.4);
+  height: 16px; 
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  background-color: transparent;
-  fill: transparent; /* Ховаємо іконку галочки */
+  
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;   
+  /* Початковий стан (Normal) */
+  
+  /* background-color: transparent; */
+  fill: transparent; /* Ховаємо іконку галочки */
+  margin-right: 8px;   
 }
 
 /* Стан Active (Checked) */
